@@ -1,0 +1,105 @@
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Registration form Template | PrepBootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<div class="page-header">
+    <h1>Registration form <small>A Bootstrap template showing a registration form with standard fields</small></h1>
+</div>
+
+<!-- Registration form - START -->
+<div class="container">\
+    <div class="row">
+        <form role="form" method="post" enctype="multipart/form-data">{% csrf_token %}
+            <div class="col-lg-6">
+                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>
+                <div class="form-group">
+                    <label for="InputName">FATHERNAME</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="fathername" id="InputName" placeholder="father name" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail12">MATHERnAME</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="InputEmailFirst" name="mathername" placeholder="mothername" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">Vaccination</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="InputEmailSecond" name="vaccination" placeholder="vaccination" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">PRICE</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="InputEmailSecond" name="price" placeholder="PRICE" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">AUTHERNAME</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="InputEmailSecond" name="authername" placeholder="PRICE" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">ADDRESS</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="InputEmailSecond" name="addressname" placeholder="PRICE" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">DATE</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="InputEmailSecond" name="date" placeholder="PRICE" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">upload</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="InputEmailSecond1" name="upload" placeholder="Select A File" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+
+                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+            </div>
+        </form>
+        <div class="col-lg-5 col-md-push-1">
+            <div class="col-md-12">
+                <div class="alert alert-success">
+                    <strong><span class="glyphicon glyphicon-ok"></span> Success! Message sent.</strong>
+                </div>
+                <div class="alert alert-danger">
+                    <span class="glyphicon glyphicon-remove"></span><strong> Error! Please check all page inputs.</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Registration form - END -->
+
+</div>
+
+</body>
+</html>

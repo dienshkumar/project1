@@ -1,0 +1,67 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="{{STATIC_URL}}bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+          <th>Fathername</th>
+          <th>mathername</th>
+          <th>Vaccination</th>
+          <th>price</th>
+
+          <th>authername</th>
+          <th>addressname</th>
+          <th>date</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+    {% for tem in temp  %}
+
+      <tr>
+          <td>{{tem.student1.father_name}}</td><!--  throw refeance foreignkey linking perpose-->
+          <td>{{tem.student1.mather_name}}</td>
+          <td>{{tem.student1.vaccination}}</td>
+          <td>{{tem.student1.price}}</td>
+          <td>{{tem.auther_name}}</td>
+          <td>{{tem.address_name}}</td>
+          <td>{{tem.date}}</td>
+          </tr>
+    {% endfor %}
+
+
+
+
+
+
+
+    <!--
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+-->    </tbody>
+  </table>
+</body>
+</html>
